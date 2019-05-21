@@ -13,7 +13,7 @@ See an example file [here](default.json).
 * `server.hostname` e.g. "0.0.0.0" - the address that the server listens on.
 * `server.publicFhirBase` e.g. "http://localhost:3447/fhir" - the public address which this FHIR server is available on, this is used to produce full urls for references.
 * `server.port` e.g. 3447 - the port the server listen on.
-* `server.fhirVersion` e.g. "dstu2" - the fhirVersion to configure Hearth for. Valid  options: `dstu2`, `stu3`
+* `server.fhirVersion` e.g. "dstu2" - the fhirVersion to configure Hearth for. Valid  options: `dstu2`, `stu3`, `r4`
 * `mongodb.url` e.g. "mongodb://localhost/hearth" - the mongo connection url used to connect to the mongo database
 * `authentication.authWindowSeconds` e.g. 10 - Only used when `authentication.type` = `openhim-style`, it describes the maximum amount of time to pass before a request using this auth style is no longer valid.
 * `authentication.type` e.g. "disabled" - the authentication type to use. Valid options: `disabled`, `jwt` or `openhim-style`. OpenHIM style is the same auth mechanism that the OpenHIM project uses. See [here](http://openhim.readthedocs.io/en/latest/dev-guide/api-ref.html#initial-authentication-notification). For `jwt` see the following JWT options to configure how you use JWTs within Hearth.

@@ -3,7 +3,7 @@
   "version": "1.0.0-beta.1",
   "description": "Hearth, a home for FHIR. A fast FHIR-compliant server.",
   "scripts": {
-    "start": "node lib/server.js",
+    "start": "node --inspect lib/server.js",
     "stop": "pkill -SIGINT Hearth",
     "dev:start": "cross-env NODE_ENV='development' npm run start",
     "test": "npm run test:code && npm -s run test:style",

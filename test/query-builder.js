@@ -226,6 +226,15 @@ tap.test('.buildQueryForToken(): ', { autoend: true }, (t) => {
       executeQueryBuilderTest(t, 'buildQueryForToken', 'AuditEvent', queryParam, expected, value)
     })
   }
+
+  if (FHIR_VERSION === 'r4') {
+    t.test('should return a valid token clause when token of type "Coding" is supplied', (t) => {
+      queryParam = 'type'
+      value = 'some-system|some-code'
+      expected = { 'type': { '$elemMatch': { 'system': 'some-system', 'code': 'some-code' } } }
+      executeQueryBuilderTest(t, 'buildQueryForToken', 'AuditEvent', queryParam, expected, value)
+    })
+  }
 })
 
 tap.test('.buildQueryForReference(): ', { autoend: true }, (t) => {
@@ -288,6 +297,22 @@ tap.test('Conditional Paths: ', { autoend: true }, (t) => {
   })
 
   if (FHIR_VERSION === 'stu3') {
+    t.test('should return a valid token clause when search parameter path is conditional - composed-of', (t) => {
+      queryParam = 'composed-of'
+      value = '0210000000'
+      expected = {
+        'relatedArtifact.resource': {
+          '$elemMatch': {
+            'value': '0210000000',
+            'type': 'composed-of'
+          }
+        }
+      }
+      executeQueryBuilderTest(t, 'buildQueryForToken', 'ActivityDefinition', queryParam, expected, value)
+    })
+  }
+
+  if (FHIR_VERSION === 'r4') {
     t.test('should return a valid token clause when search parameter path is conditional - composed-of', (t) => {
       queryParam = 'composed-of'
       value = '0210000000'
