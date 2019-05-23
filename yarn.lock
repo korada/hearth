@@ -489,11 +489,6 @@ bind-obj-methods@^1.0.0:
   resolved "https://registry.yarnpkg.com/bind-obj-methods/-/bind-obj-methods-1.0.0.tgz#4f5979cac15793adf70e488161e463e209ca509c"
   integrity sha1-T1l5ysFXk633DkiBYeRj4gnKUJw=
 
-bindings@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.2.1.tgz#14ad6113812d2d37d72e67b4cacb4bb726505f11"
-  integrity sha1-FK1hE4EtLTfXLme0ystLtyZQXxE=
-
 bindings@~1.3.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.3.1.tgz#21fc7c6d67c18516ec5aaa2815b145ff77b26ea5"
@@ -2021,17 +2016,17 @@ fast-levenshtein@~2.0.4:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fhir@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/fhir/-/fhir-3.3.1.tgz#dbc0f2edc8096225af6e659041a686a4419c13ad"
-  integrity sha512-YXLRgn4TVzWfF5HuoP5mPrzuuRIS34EDe1Z8e1P7f7nQoN81PELZGegoKIi4xMvN4gSSPm/ZS29SJsUjVa82rw==
+fhir@4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/fhir/-/fhir-4.7.0.tgz#f0d37854d42c08ad00f3c27bd5e70bf0beb17ad3"
+  integrity sha512-mNFTzUN3OJ9kPKvXBaukLiTB1mstpDU1KHkUfdhIXNDn546v2quW3OfobkjPg6/g5p0z8r6IptPUg//Nlk2kIQ==
   dependencies:
-    libxmljs "0.18.0"
-    lodash "^3.10.1"
+    lodash "^4.17.11"
     path "^0.12.7"
     q "^1.4.1"
-    xml2js "^0.4.9"
-    xmlbuilder "^2.6.4"
+    randomatic "^3.1.0"
+    underscore "^1.8.3"
+    xml-js "^1.6.8"
 
 figures@^1.3.5:
   version "1.7.0"
@@ -3301,14 +3296,6 @@ lex-parser@0.1.x, lex-parser@~0.1.3:
   resolved "https://registry.yarnpkg.com/lex-parser/-/lex-parser-0.1.4.tgz#64c4f025f17fd53bfb45763faeb16f015a747550"
   integrity sha1-ZMTwJfF/1Tv7RXY/rrFvAVp0dVA=
 
-libxmljs@0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/libxmljs/-/libxmljs-0.18.0.tgz#e2993dcf28e4dc60e73486e2db6225dc24d18531"
-  integrity sha1-4pk9zyjk3GDnNIbi22Il3CTRhTE=
-  dependencies:
-    bindings "1.2.1"
-    nan "2.3.2"
-
 libxmljs@^0.18.9-pre0:
   version "0.18.9-pre0"
   resolved "https://registry.yarnpkg.com/libxmljs/-/libxmljs-0.18.9-pre0.tgz#2e607aae228d856777bab1205d54e0dcefe825ba"
@@ -3407,11 +3394,6 @@ lodash.once@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   integrity sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=
-
-lodash@^3.10.1, lodash@^3.5.0:
-  version "3.10.1"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
-  integrity sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
 
 lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.11"
@@ -3696,11 +3678,6 @@ mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
-
-nan@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.3.2.tgz#4d4ecf17e1da4e989efb4f273d8d00201cad087e"
-  integrity sha1-TU7PF+HaTpie+08nPY0AIBytCH4=
 
 nan@~2.10.0:
   version "2.10.0"
@@ -4421,7 +4398,7 @@ qs@~6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
 
-randomatic@^3.0.0:
+randomatic@^3.0.0, randomatic@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-3.1.1.tgz#b776efc59375984e36c537b2f51a1f0aff0da1ed"
   integrity sha512-TuDE5KxZ0J461RVjrJZCJc+J+zCkTb1MbH9AQUq68sMhOMcy9jLcb3BrZKgp9q9Ncltdg4QVqWrH02W2EFFVYw==
@@ -4859,7 +4836,7 @@ samsam@1.x, samsam@^1.1.3:
   resolved "https://registry.yarnpkg.com/samsam/-/samsam-1.3.0.tgz#8d1d9350e25622da30de3e44ba692b5221ab7c50"
   integrity sha512-1HwIYD/8UlOtFS3QO3w7ey+SdSDFE4HRNLZoZRYVQefrOY3l17epswImeB1ijgJFQJodIaHcwkp3r/myBjFVbg==
 
-sax@>=0.6.0:
+sax@>=0.6.0, sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
@@ -5812,6 +5789,11 @@ underscore@1.7.0:
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.7.0.tgz#6bbaf0877500d36be34ecaa584e0db9fef035209"
   integrity sha1-a7rwh3UA02vjTsqlhODbn+8DUgk=
 
+underscore@^1.8.3:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.9.1.tgz#06dce34a0e68a7babc29b365b8e74b8925203961"
+  integrity sha512-5/4etnCkd9c8gwgowi5/om/mYO5ajCaOgdzj/oW+0eQV9WxKBDZw5+ycmKmeaTXjInS/W0BzpGLo2xR2aBwZdg==
+
 unicode-length@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/unicode-length/-/unicode-length-1.0.3.tgz#5ada7a7fed51841a418a328cf149478ac8358abb"
@@ -6081,20 +6063,20 @@ xdg-basedir@^3.0.0:
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
   integrity sha1-SWsswQnsqNus/i3HK2A8F8WHCtQ=
 
-xml2js@^0.4.11, xml2js@^0.4.9:
+xml-js@^1.6.8:
+  version "1.6.11"
+  resolved "https://registry.yarnpkg.com/xml-js/-/xml-js-1.6.11.tgz#927d2f6947f7f1c19a316dd8eea3614e8b18f8e9"
+  integrity sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==
+  dependencies:
+    sax "^1.2.4"
+
+xml2js@^0.4.11:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.19.tgz#686c20f213209e94abf0d1bcf1efaa291c7827a7"
   integrity sha512-esZnJZJOiJR9wWKMyuvSE1y6Dq5LCuJanqhxslH2bxM6duahNZ+HMpCLhBQGZkbX6xRf8x1Y2eJlgt2q3qo49Q==
   dependencies:
     sax ">=0.6.0"
     xmlbuilder "~9.0.1"
-
-xmlbuilder@^2.6.4:
-  version "2.6.5"
-  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-2.6.5.tgz#6ff7ad60fb72d22764f007a164b77f2bf1400526"
-  integrity sha1-b/etYPty0idk8AehZLd/K/FABSY=
-  dependencies:
-    lodash "^3.5.0"
 
 xmlbuilder@~9.0.1:
   version "9.0.7"

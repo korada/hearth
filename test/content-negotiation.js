@@ -13,7 +13,9 @@ const tap = require('tap')
 const request = require('request')
 const _ = require('lodash')
 const libxmljs = require('libxmljs')
-const FHIR = require('fhir')
+const FHIR = require('fhir').Fhir
+const FhirVersions = require('fhir').Versions;
+const ParseConformance = require('fhir').ParseConformance
 
 const headers = env.getTestAuthHeaders(env.users.sysadminUser.email)
 
@@ -131,7 +133,7 @@ tap.test('patient should be saved correctly when body is in XML format', (t) => 
       const pat = _.cloneDeep(require('./resources/Patient-1.json'))
       delete pat.id
 
-      const fhir = new FHIR(FHIR.DSTU2)
+      const fhir = new FHIR(new ParseConformance(false, FhirVersions.DTSU2))
       const patientXML = fhir.JsonToXml(JSON.stringify(pat))
 
       const updatedHeaders = _.assign({ 'accept': ['application/xml', 'application/xml+fhir'], 'Content-Type': 'application/xml' }, headers)
